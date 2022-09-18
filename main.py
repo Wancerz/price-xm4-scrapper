@@ -12,6 +12,7 @@ class SHOP:
             mail().send_mail(self.price,self.price_temporary)
         pass
 
+    #scrapping prices from the shops
     def get_price(self,shop_name,link):
 
         response = requests.get(link)
@@ -26,6 +27,7 @@ class SHOP:
         if shop_name == 'rtv_euro_agd':
             return
 
+    #load prices from json 
     def get_price_temporary(self,):
         self.price_temporary = {}
         self.url_list = json_functions().open_json("url")

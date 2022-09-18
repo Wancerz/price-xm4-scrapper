@@ -6,7 +6,8 @@ from email.message import EmailMessage
 class mail:
     def __init__(self) -> None:
         pass
-
+    
+    #create message and send mail, uses config.json file
     def send_mail(self,price,price_temporary)->None:
 
         body = f"""ZMIANA CEN SŁUCHAWEK
